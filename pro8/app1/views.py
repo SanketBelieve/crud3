@@ -28,4 +28,7 @@ def showview(request):
 
 def deleteview(request,x):
     obj=Order.objects.get(id=x)
+    if request.method=='POST':
+        obj.delete()
+    return render(request,'app1/delete.html',{})    
     
