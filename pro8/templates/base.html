@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .head {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px;
+            text-align: center;
+        }
+        .head ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .head li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .head a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+        
+
+    {% block title %}
+    <title>Parent</title>
+    {% endblock %}
+</head>
+<body>
+    <div class='head'>
+        <ul>
+            <li><a href="/a1/add/">Add</a></li>
+            <li><a href="/a1/show/">Show</a></li>
+        </ul>
+
+    </div>
+    {% block content%}
+    {% endblock%}
+</body>
+</html>
